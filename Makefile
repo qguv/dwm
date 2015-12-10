@@ -30,6 +30,7 @@ dwm: ${OBJ}
 
 clean:
 	@echo cleaning
+	@rm -f config.h
 	@rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
 
 dist: clean
@@ -57,4 +58,4 @@ uninstall:
 	@echo removing manual page from ${DESTDIR}${MANPREFIX}/man1
 	@rm -f ${DESTDIR}${MANPREFIX}/man1/dwm.1
 
-.PHONY: all options clean dist install uninstall
+.PHONY: all options clean dist install uninstall config.h
